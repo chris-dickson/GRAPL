@@ -1,6 +1,6 @@
-								GR-APL
-					     A global routing application for VLSI design	
-							     Chris Dickson
+GR-APL
+A global routing application for VLSI design	
+
 					
 To compile:
 -----------
