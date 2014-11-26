@@ -1,0 +1,57 @@
+# args.txt
+# example arg file
+#
+# format:
+#	var=value;
+#
+# var options:
+#	N 		: (integer) representing maximum number of iterations
+#	ALPHA 		: (double) weight towards minimizing wirelength
+#	BETA		: (double) weight towards minimizing vias
+#	TAU_HEURISTIC 	: (integer) choosing which method we use to make steps, options:
+#				1 : default
+#				2 : TAU = 1 - NU
+#				3 : TAU = NU
+#				4 : 
+#				5 : golden ratio
+#				6 : TAU = 0.04
+#				7 : TAU = min(NU,1-NU)
+#				8 : minimize sum of violation
+#				9 : bad line search to minimize potential
+#			       10 : secant method to minimize potential (not working, nor used)
+#			       11 : bisection method + divided differences to minimize potential (used in thesis results)
+#	EPS		: (double) epsilon value
+#	BAIL_ON_LAMBDA  : (double) quits when maximum fractional congestion is below this value
+#	DELTA_LAMBDA    : (double) quits when change in maximum fractional congestion is less than this value
+#	BENCH_STYLE	: (int) options:
+#				0 : IBM Benchmark Format
+#				1 : MCNC Benchmark Format
+#	NO_THREADS	: (int) the number of threads used to generate trees
+#	CONGESTION_MAP 	: 0 or 1, represents whether we output congestion data after each iteration for MATLAB visualization code
+#			  if 1, we create an output/ directory in the build/ folder.  
+#	STAT_OUTPUT	: (string) the filename for the statistics output file.  (always converted to lower case)
+#	TREE_OUTPUT	: (string) the filename for the tree output file. (always converted to lower case)
+#	FIXING_HEURISTIC: (string) options:
+#			BB_AREA	  : Use the area of the bounding box
+#			BB_SUM	  : Use the sum of the dimenstions of the bounding box
+#	FIXING_PERCENTAGE: (double) the percentage of nets that become fixed when using a given fixing heuristic
+#	FIXING_ORDER	: (string) options:
+#			INCREASING: sort the nets in non-decreasing order of the given heuristic
+#			DECREASING: sort the nets in non-increasing order of the given heuristic
+#
+# 
+#
+N=10;
+ALPHA=1.0;
+BETA=0.0;
+TAU_HEURISTIC=11;
+EPS=0.00001;
+BAIL_ON_LAMBDA=0.85;
+#DELTA_LAM=0.0001;
+BENCH_STYLE=1;
+NO_THREADS=16;
+STAT_OUTPUT=stats.txt;
+TREE_OUTPUT=alltrees.txt;
+FIXING_HEURISTIC=BB_AREA;
+FIXING_PERCENTAGE=0.70;
+FIXING_ORDER=INCREASING;
