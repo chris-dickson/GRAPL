@@ -1,0 +1,11 @@
+Number of Nets: 2
+Number of Modules: 49
+Number of Rows: 7
+Number of Columns: 7
+The Maximum Capacity: 1
+Horizontal Edge Length: 1.0
+Vertical Edge Length: 1.0
+
+
+0, 2:, 2,3, 5,5, ;
+1, 4:, 1,1, 2,2, 3,3, 4,4, ;

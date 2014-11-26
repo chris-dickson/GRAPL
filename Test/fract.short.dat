@@ -1,0 +1,12 @@
+Number of Nets: 3
+Number of Modules: 149
+Number of Rows: 8
+Number of Columns: 8
+The Maximum Capacity: 4
+Horizontal Edge Length: 68.000000
+Vertical Edge Length: 108.750000
+
+
+0, 3:, 3,5, 4,6, 1,7, ;
+1, 5:, 3,1, 2,1, 3,5, 2,5, 2,1, ;
+2, 5:, 1,6, 1,7, 4,6, 3,6, 1,6, ;
