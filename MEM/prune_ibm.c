@@ -23,7 +23,13 @@ typedef struct Net_ {
 	CoordData* terminals;
 }Net;
 
+typedef struct point2d_ {
+	int x,y;
+} point2d;
 
+int match2d(const void *a1, const void *a2) {
+	return ((((point2d*)a1)->x == ((point2d*)a2)->x)&&(((point2d*)a1)->y == ((point2d*)a2)->y));
+}
 
 /*--------------------------------------------------------------*/
 /*	Purpose: Remove all repeated terminals from each net.  Also	*/
@@ -54,13 +60,7 @@ int prune_benchmark(char *inFileName, char *outFileName, int Tolerance) {
 		cut_off = Tolerance;
 	
 	
-	typedef struct point2d_ {
-		int x,y;
-	} point2d;
-	
-	int match2d(const void *a1, const void *a2) {
-		return ((((point2d*)a1)->x == ((point2d*)a2)->x)&&(((point2d*)a1)->y == ((point2d*)a2)->y));
-	}
+
 
 	// open the benchmark file
 	if ( (fp = fopen(inFileName,"r")) == NULL) {
