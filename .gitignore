@@ -1,0 +1,3 @@
+build/
+MT/*.o
+MEM/*.o
